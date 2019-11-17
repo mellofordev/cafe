@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <title>{{product.pname}}-Order </title>
+    <div class=" w3-card">
+    <p>{{product.pname}}</p> <p>${{product.price}}</p>
+        </h5><a class="w3-btn w3-round-xxlarge w3-black" href="javascript:void(0)" onclick="hello()">Total check </a>
+    <p id="price"></p>
+    </div>
+
+</head>
+  <form name="form" class="w3-container" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+  action="https://script.google.com/macros/s/AKfycbwRXEPcG44Ov269b5u2IwXf-4kpV2HvcoJkWMElVw/exec">
+  <div class="form-elements">
+  <fieldset class="pure-group">
+    <label>Food</label>
+    <input id="food" type="text" name="food" value="{{product.pname}}" class="w3-input w3-padding-16 w3-border" >
+  </fieldset>
+  <fieldset class="pure-group">
+    <label>E-mail</label>
+    <input id="email" type="email" name="email" value="" class="w3-input w3-padding-16 w3-border"  placeholder="Email" required>
+  </fieldset>
+
+  <fieldset class="pure-group">
+  <input type="number"id="seatnumber2" name="seatnumber" value="" placeholder="Quantity" class="w3-input w3-padding-16 w3-border">
+  </fieldset>
+  <fieldset class="pure-group">
+  <label>Payment</label>
+  <select id="payment" name="paymenttype" class="w3-input w3-padding-16 w3-border">
+    <option value="cash">By cash</option>
+    <option value="paypal">Paypal</option>
+    <option value="paytm">paytm</option>
+  </select>
+  </fieldset>
+  <button type="submit"  class="w3-btn w3-round-xxlarge w3-black" onclick="book(document.getElementById("name").value,document.getElementById("email").value,document.getElementById("seatnumber2").value)">BUY NOW</button>
+
+    </div>
+  </div>
+<body>
+<script type="text/javascript">
+    function hello(){
+     var a = prompt("enter the quantity ");
+     var price = a*{{product.price}}
+     document.getElementById("price").innerHTML="Total amount : $"+price;
+     }
+     function book(email2,seatnumber) {
+var e = document.getElementById("select");
+
+
+
+var payment1 = document.getElementById("payment");
+var paymenttype = payment1.options[payment1.selectedIndex].value;
+    }
+</script>
+</body>
+</html>
