@@ -1,0 +1,15 @@
+{
+  "background_color": "purple",
+  "description": "Fox cafe",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon/fox-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Fox cafe",
+  "short_name": "Foxes",
+  "start_url": "mello.pythonanywhere.com"
+}
